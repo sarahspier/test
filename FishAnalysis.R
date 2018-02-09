@@ -18,4 +18,11 @@ fish_data %>%
 fish_data_cat_mm
 nrow(fish_data_cat_mm)
 
+fish_data_cat_mm %>%
+  filter(annnumber == "EDGE") -> fish_data_edge
 
+ggplot(data=fish_data_cat_mm, aes(x = length, y = scalelength)) +
+  geom_point(aes(color=lakeid))+
+  xlab("Body Length") +
+  ylab("Scale Length") +
+  theme_classic()
