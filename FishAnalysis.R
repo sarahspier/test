@@ -2,7 +2,7 @@
 install.packages("tidyverse")
 library(tidyverse)
 
-fish_data <- read.csv("Gaeta_etal_CLC_data.csv")
+fish_data <- read.csv("Gaeta_etal_CLC_data_1.csv")
 fish_data
 head(fish_data)
 
@@ -17,3 +17,5 @@ fish_data %>%
   filter(scalelength>=1) -> fish_data_cat_mm
 fish_data_cat_mm
 nrow(fish_data_cat_mm)
+
+
