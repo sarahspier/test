@@ -10,3 +10,10 @@ head(fish_data)
 fish_data %>%
   mutate(length_cat = ifelse(length>300, "big", "small")) -> fish_data_cat
 fish_data_cat
+
+#remove rows that have catfish that are less than 1mm
+fish_data %>%
+  mutate(length_cat = ifelse(length>300, "big", "small")) %>%
+  filter(scalelength>=1) -> fish_data_cat_mm
+fish_data_cat_mm
+nrow(fish_data_cat_mm)
